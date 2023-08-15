@@ -39,7 +39,7 @@ def xtb_energy(mol, path_xtb, water=False, dipole=False):
     result['gap'] = 23.06 * float(gap[0].split()[3])
     
     return result
-    
+
 def xtb_optimize(mol, level, path_xtb):
     in_path = f'{my_dir}/xtb.xyz'
     out_path = f'{my_dir}/xtbopt.xyz'

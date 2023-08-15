@@ -48,9 +48,9 @@ def embed_seeds(mol, data, n_confs, single_conf=False, smi=None, embed_func=None
         except Exception as e:
             print(e.output)
             pass
-        if len(mol.GetConformers()) != embed_num_confs:
-            print(len(mol.GetConformers()), '!=', embed_num_confs)
-            return [], None
+        # if len(mol.GetConformers()) != embed_num_confs:
+        #     print(len(mol.GetConformers()), '!=', embed_num_confs)
+        #     return [], None
         if mmff: try_mmff(mol)
 
     if pdb: pdb = PDBFile(mol)
